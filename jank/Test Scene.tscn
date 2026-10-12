@@ -116,3 +116,16 @@ polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.104
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chunk1" unique_id=1848147505]
 position = Vector2(-90, 312)
 shape = SubResource("RectangleShape2D_48r1q")
+
+[node name="Chunk2" type="StaticBody2D" parent="." unique_id=1770343159]
+position = Vector2(973, -26)
+
+[node name="Polygon2D" type="Polygon2D" parent="Chunk2" unique_id=348608480]
+position = Vector2(-36.000015, 295)
+scale = Vector2(0.2373221, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chunk2" unique_id=776974233]
+position = Vector2(-90, 312)
+shape = SubResource("RectangleShape2D_48r1q")
