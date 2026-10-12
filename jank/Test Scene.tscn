@@ -1,6 +1,20 @@
 [gd_scene format=3 uid="uid://ishwkhre816x"]
 
 [ext_resource type="Texture2D" uid="uid://dy56y0s7l3b3y" path="res://icon.svg" id="1_pvqqe"]
+[ext_resource type="Script" uid="uid://cug0bi0ldored" path="res://Test Scene Script.gd" id="1_ykvvg"]
+
+[sub_resource type="Shader" id="Shader_bwqk1"]
+code = "shader_type fog;
+
+void fog() {
+	// Called once for every froxel that is touched by an axis-aligned bounding box
+	// of the associated FogVolume. This means that froxels that just barely touch
+	// a given FogVolume will still be used.
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ykvvg"]
+shader = SubResource("Shader_bwqk1")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cxiam"]
 radius = 103.711136
@@ -8,21 +22,21 @@ radius = 103.711136
 [sub_resource type="CircleShape2D" id="CircleShape2D_oym00"]
 radius = 369.5416
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_cxiam"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cxiam"]
 size = Vector2(542, 108.000015)
 
-[node name="Node2D" type="Node2D" unique_id=965193724]
-position = Vector2(15, 18)
+[node name="Node2D" type="Node2D" unique_id=965193724 node_paths=PackedStringArray("Player")]
+script = ExtResource("1_ykvvg")
+Player = NodePath("Player")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=272158072]
+[node name="Player" type="RigidBody2D" parent="." unique_id=272158072]
+material = SubResource("ShaderMaterial_ykvvg")
 position = Vector2(268, 187)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=666665252]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=666665252]
 shape = SubResource("CircleShape2D_cxiam")
 
-[node name="Icon" type="Sprite2D" parent="RigidBody2D/CollisionShape2D" unique_id=1676920389]
+[node name="Icon" type="Sprite2D" parent="Player/CollisionShape2D" unique_id=1676920389]
 position = Vector2(1.0000029, -0.9999914)
 scale = Vector2(1.46875, 1.3593751)
 texture = ExtResource("1_pvqqe")
@@ -42,11 +56,6 @@ texture = ExtResource("1_pvqqe")
 
 [node name="Line2D" type="Line2D" parent="StaticBody2D/CollisionShape2D" unique_id=1181462710]
 points = PackedVector2Array(-365, -34, -297, -214, -127, -337, 95, -360, 291, -242, 360, -83, 364, 51, 345, 125, 296, 211, 215, 301, 124, 345, -28, 363, -173, 314, -266, 247, -336, 124, -372, -22)
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1549837791]
-position = Vector2(84, 281)
-amount = 11
-texture = SubResource("NoiseTexture2D_cxiam")
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1060266912]
 position = Vector2(889.1045, 111.62189)
