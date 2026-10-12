@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://v1as2l624s3i"]
 
-[ext_resource type="Script" uid="uid://cug0bi0ldored" path="res://Test Scene Script.gd" id="1_jkau5"]
+[ext_resource type="Script" uid="uid://bgy5kqo7khjtv" path="res://Test Scene Script dev trent.gd" id="1_jkau5"]
 [ext_resource type="Texture2D" uid="uid://dy56y0s7l3b3y" path="res://icon.svg" id="2_h7ysx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cxiam"]
@@ -18,9 +18,8 @@ size = Vector2(126, 30)
 [sub_resource type="CircleShape2D" id="CircleShape2D_oym00"]
 radius = 205.4069
 
-[node name="Node2D" type="Node2D" unique_id=965193724 node_paths=PackedStringArray("Player")]
+[node name="Node2D" type="Node2D" unique_id=965193724]
 script = ExtResource("1_jkau5")
-Player = NodePath("Player")
 
 [node name="Player" type="RigidBody2D" parent="." unique_id=272158072]
 position = Vector2(268, 187)

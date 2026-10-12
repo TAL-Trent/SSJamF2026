@@ -18,9 +18,8 @@ size = Vector2(126, 30)
 [sub_resource type="CircleShape2D" id="CircleShape2D_oym00"]
 radius = 205.4069
 
-[node name="Node2D" type="Node2D" unique_id=965193724 node_paths=PackedStringArray("Player")]
+[node name="Node2D" type="Node2D" unique_id=965193724]
 script = ExtResource("1_ykvvg")
-Player = NodePath("Player")
 
 [node name="Player" type="RigidBody2D" parent="." unique_id=272158072]
 position = Vector2(268, 187)
