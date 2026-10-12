@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://ishwkhre816x"]
 
+[ext_resource type="Texture2D" uid="uid://dy56y0s7l3b3y" path="res://icon.svg" id="1_pvqqe"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_cxiam"]
 radius = 103.711136
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oym00"]
+radius = 369.5416
 
 [node name="Node2D" type="Node2D" unique_id=965193724]
 
@@ -10,3 +15,22 @@ position = Vector2(268, 187)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=666665252]
 shape = SubResource("CircleShape2D_cxiam")
+
+[node name="Icon" type="Sprite2D" parent="RigidBody2D/CollisionShape2D" unique_id=1676920389]
+position = Vector2(1.0000029, -0.9999914)
+scale = Vector2(1.46875, 1.3593751)
+texture = ExtResource("1_pvqqe")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1567737292]
+position = Vector2(624, 538)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=362083452]
+shape = SubResource("CircleShape2D_oym00")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D" unique_id=444570]
+position = Vector2(-15.500008, -30.999985)
+scale = Vector2(3.9453125, 3.6250002)
+texture = ExtResource("1_pvqqe")
+
+[node name="Line2D" type="Line2D" parent="StaticBody2D/CollisionShape2D" unique_id=1181462710]
+points = PackedVector2Array(-365, -34, -297, -214, -127, -337, 95, -360, 291, -242, 360, -83, 364, 51, 345, 125, 296, 211, 215, 301, 124, 345, -28, 363, -173, 314, -266, 247, -336, 124, -372, -22)
