@@ -18,8 +18,9 @@ size = Vector2(31, 636)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_48r1q"]
 size = Vector2(126, 30)
 
-[node name="Node2D" type="Node2D" unique_id=965193724]
+[node name="Node2D" type="Node2D" unique_id=965193724 node_paths=PackedStringArray("Player")]
 script = ExtResource("1_4t0cu")
+Player = NodePath("Player")
 
 [node name="Player" type="RigidBody2D" parent="." unique_id=272158072]
 position = Vector2(268, 187)
@@ -29,11 +30,6 @@ constant_torque = 2.13
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=666665252]
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_cxiam")
-
-[node name="Icon" type="Sprite2D" parent="Player/CollisionShape2D" unique_id=1676920389]
-position = Vector2(7.6293945e-06, 0.9999943)
-scale = Vector2(0.2304688, 0.3125001)
-texture = ExtResource("2_4v4xi")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1567737292]
 position = Vector2(779, 519)
@@ -128,3 +124,8 @@ polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.104
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chunk2" unique_id=776974233]
 position = Vector2(-90, 312)
 shape = SubResource("RectangleShape2D_48r1q")
+
+[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1676920389]
+position = Vector2(398, 201)
+scale = Vector2(0.2304688, 0.3125001)
+texture = ExtResource("2_4v4xi")
