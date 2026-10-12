@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://ctap4pegpqyro"]
 
+[ext_resource type="Texture2D" uid="uid://qhh3uy2ktr2b" path="res://Assets/Images/GroundTexture.tres" id="1_kyxg0"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2v4n4"]
 size = Vector2(358, 9)
-
-[sub_resource type="ImageTexture" id="ImageTexture_ma5b5"]
 
 [node name="Level1" type="Node2D" unique_id=2110498440]
 
@@ -14,6 +14,6 @@ position = Vector2(179, 4)
 shape = SubResource("RectangleShape2D_2v4n4")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D" unique_id=314267170]
-position = Vector2(92, 149)
-scale = Vector2(7.984375, 2.5)
-texture = SubResource("ImageTexture_ma5b5")
+position = Vector2(-102, 138)
+scale = Vector2(201.98438, 13.500004)
+texture = ExtResource("1_kyxg0")
