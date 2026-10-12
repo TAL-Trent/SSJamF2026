@@ -2,6 +2,7 @@ extends Node
 
 @export var Player: RigidBody2D
 @export var PlayerSprite: Sprite2D
+@export var EolTrigger: Area2D
 
 func _input(event):
 	if event.is_action_pressed("jump"):
@@ -34,4 +35,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	PlayerSprite.global_position = Player.global_position
+
+#(broken)called when the player touches the end of level trigger
+func _on_area_2d_area_entered(shape: CollisionShape2D) -> void:
+	print("level exit entered")
