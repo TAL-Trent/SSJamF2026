@@ -6,9 +6,10 @@ func _input(event):
 	if event.is_action_pressed("jump"):
 		var myForce: Vector2
 		myForce.x = 0;
-		myForce.y = -50;
+		myForce.y = -500;
 		#Player.apply_force(myForce)
 		Player.apply_impulse(myForce);
+		
 		
 		print("Jumped!")
 		

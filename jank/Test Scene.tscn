@@ -3,19 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://dy56y0s7l3b3y" path="res://icon.svg" id="1_pvqqe"]
 [ext_resource type="Script" uid="uid://cug0bi0ldored" path="res://Test Scene Script.gd" id="1_ykvvg"]
 
-[sub_resource type="Shader" id="Shader_bwqk1"]
-code = "shader_type fog;
-
-void fog() {
-	// Called once for every froxel that is touched by an axis-aligned bounding box
-	// of the associated FogVolume. This means that froxels that just barely touch
-	// a given FogVolume will still be used.
-}
-"
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ykvvg"]
-shader = SubResource("Shader_bwqk1")
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_cxiam"]
 radius = 103.711136
 
@@ -30,8 +17,9 @@ script = ExtResource("1_ykvvg")
 Player = NodePath("Player")
 
 [node name="Player" type="RigidBody2D" parent="." unique_id=272158072]
-material = SubResource("ShaderMaterial_ykvvg")
 position = Vector2(268, 187)
+constant_force = Vector2(0, -300)
+constant_torque = 2.13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=666665252]
 shape = SubResource("CircleShape2D_cxiam")
