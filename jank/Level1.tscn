@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ctap4pegpqyro"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2v4n4"]
+size = Vector2(358, 9)
+
+[sub_resource type="ImageTexture" id="ImageTexture_ma5b5"]
+
+[node name="Level1" type="Node2D" unique_id=2110498440]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=782128421]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1544405663]
+position = Vector2(179, 4)
+shape = SubResource("RectangleShape2D_2v4n4")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D" unique_id=314267170]
+position = Vector2(92, 149)
+scale = Vector2(7.984375, 2.5)
+texture = SubResource("ImageTexture_ma5b5")
