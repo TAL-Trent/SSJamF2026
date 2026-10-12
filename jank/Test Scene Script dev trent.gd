@@ -1,6 +1,7 @@
 extends Node
 
 @export var Player: RigidBody2D
+@export var PlayerSprite: Sprite2D
 
 func _input(event):
 	if event.is_action_pressed("jump"):
@@ -33,4 +34,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	PlayerSprite.global_position = Player.global_position

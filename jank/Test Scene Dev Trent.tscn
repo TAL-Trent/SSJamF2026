@@ -18,8 +18,15 @@ size = Vector2(126, 30)
 [sub_resource type="CircleShape2D" id="CircleShape2D_oym00"]
 radius = 205.4069
 
-[node name="Node2D" type="Node2D" unique_id=965193724]
+[node name="Node2D" type="Node2D" unique_id=965193724 node_paths=PackedStringArray("Player", "PlayerSprite")]
 script = ExtResource("1_jkau5")
+Player = NodePath("Player")
+PlayerSprite = NodePath("Player2dSprite")
+
+[node name="Player2dSprite" type="Sprite2D" parent="." unique_id=1676920389]
+position = Vector2(268, 190)
+scale = Vector2(0.2304688, 0.3125001)
+texture = ExtResource("2_h7ysx")
 
 [node name="Player" type="RigidBody2D" parent="." unique_id=272158072]
 position = Vector2(268, 187)
@@ -29,11 +36,6 @@ constant_torque = 2.13
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=666665252]
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_cxiam")
-
-[node name="Icon" type="Sprite2D" parent="Player" unique_id=1676920389]
-position = Vector2(0, 3)
-scale = Vector2(0.2304688, 0.3125001)
-texture = ExtResource("2_h7ysx")
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1060266912]
 position = Vector2(880, 168)
