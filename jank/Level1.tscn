@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://ctap4pegpqyro"]
-
-[node name="Level1" type="Node2D" unique_id=2110498440]
-scale = Vector2(1e-05, 1e-05)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1632703386]
-
-[node name="Line2D" type="Line2D" parent="StaticBody2D" unique_id=1772021855]
-points = PackedVector2Array(100000.01, 44700004, 115500010, 45900004, 115700010, 63500004, 1100000.1, 62800004, 200000.02, 46600004, 100000.01, 44900004)

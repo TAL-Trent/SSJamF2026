@@ -1,13 +1,10 @@
-[gd_scene format=3 uid="uid://bq0b4qoobege0"]
+[gd_scene format=3 uid="uid://v1as2l624s3i"]
 
-[ext_resource type="Script" uid="uid://bue88cpnslkmb" path="res://test scene2 script.gd" id="1_4t0cu"]
-[ext_resource type="Texture2D" uid="uid://dy56y0s7l3b3y" path="res://icon.svg" id="2_4v4xi"]
+[ext_resource type="Script" uid="uid://cug0bi0ldored" path="res://Test Scene Script.gd" id="1_jkau5"]
+[ext_resource type="Texture2D" uid="uid://dy56y0s7l3b3y" path="res://icon.svg" id="2_h7ysx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cxiam"]
 radius = 19.026299
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_oym00"]
-radius = 369.5416
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cxiam"]
 size = Vector2(1125, 30)
@@ -18,8 +15,11 @@ size = Vector2(31, 636)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_48r1q"]
 size = Vector2(126, 30)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_oym00"]
+radius = 205.4069
+
 [node name="Node2D" type="Node2D" unique_id=965193724 node_paths=PackedStringArray("Player")]
-script = ExtResource("1_4t0cu")
+script = ExtResource("1_jkau5")
 Player = NodePath("Player")
 
 [node name="Player" type="RigidBody2D" parent="." unique_id=272158072]
@@ -31,21 +31,10 @@ constant_torque = 2.13
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_cxiam")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1567737292]
-position = Vector2(779, 519)
-scale = Vector2(0.5, 0.5)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=362083452]
-scale = Vector2(0.5, 0.5)
-shape = SubResource("CircleShape2D_oym00")
-
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D" unique_id=444570]
-position = Vector2(11.999931, -1.9999084)
-scale = Vector2(4.6875, 4.406251)
-texture = ExtResource("2_4v4xi")
-
-[node name="Line2D" type="Line2D" parent="StaticBody2D/CollisionShape2D" unique_id=1181462710]
-points = PackedVector2Array(-365, -34, -297, -214, -127, -337, 95, -360, 291, -242, 360, -83, 364, 51, 345, 125, 296, 211, 215, 301, 124, 345, -28, 363, -173, 314, -266, 247, -336, 124, -372, -22)
+[node name="Icon" type="Sprite2D" parent="Player" unique_id=1676920389]
+position = Vector2(0, 3)
+scale = Vector2(0.2304688, 0.3125001)
+texture = ExtResource("2_h7ysx")
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1060266912]
 position = Vector2(880, 168)
@@ -125,7 +114,20 @@ polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.104
 position = Vector2(-90, 312)
 shape = SubResource("RectangleShape2D_48r1q")
 
-[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1676920389]
-position = Vector2(398, 201)
-scale = Vector2(0.2304688, 0.3125001)
-texture = ExtResource("2_4v4xi")
+[node name="Ball" type="RigidBody2D" parent="." unique_id=22472977]
+mass = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball" unique_id=584389202]
+position = Vector2(551, 403)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_oym00")
+
+[node name="Icon" type="Sprite2D" parent="Ball/CollisionShape2D" unique_id=869864279]
+position = Vector2(6.1035156e-05, 1.9999695)
+scale = Vector2(2.2187512, 2.0937505)
+texture = ExtResource("2_h7ysx")
+
+[node name="Line2D" type="Line2D" parent="Ball/CollisionShape2D" unique_id=1704672838]
+position = Vector2(-3.9999695, -4)
+scale = Vector2(0.5899471, 0.57738894)
+points = PackedVector2Array(-365, -34, -297, -214, -127, -337, 95, -360, 291, -242, 360, -83, 364, 51, 345, 125, 296, 211, 215, 301, 124, 345, -28, 363, -173, 314, -266, 247, -336, 124, -372, -22)

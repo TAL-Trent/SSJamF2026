@@ -1,7 +1,6 @@
 extends Node
 
 @export var Player: RigidBody2D
-@export var PlayerSprite: Sprite2D
 
 func _input(event):
 	if event.is_action_pressed("jump"):
