@@ -1,21 +1,9 @@
 [gd_scene format=3 uid="uid://ctap4pegpqyro"]
 
-[ext_resource type="Texture2D" uid="uid://bs84cmq2mfpt1" path="res://icon2.svg" id="1_kyxg0"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_2v4n4"]
-radius = 18.027756
-
 [node name="Level1" type="Node2D" unique_id=2110498440]
+scale = Vector2(1e-05, 1e-05)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1826397052]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1632703386]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1064519571]
-shape = SubResource("CircleShape2D_2v4n4")
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D" unique_id=675585636]
-position = Vector2(-6, -5.0000005)
-scale = Vector2(13, 11)
-texture = ExtResource("1_kyxg0")
-
-[node name="Line2D" type="Line2D" parent="StaticBody2D/CollisionShape2D" unique_id=1319957830]
-points = PackedVector2Array(0, -18, -1.0950298, -17.671492, -10, -15, -16, -7, -18, 2, -15, 11, -8, 16, 0, 18, 5, 18, 10, 16, 13, 13, 16, 9, 18, 4, 18, -3, 15, -10, 9, -16, 2, -18, 1, -18, -1, -18)
+[node name="Line2D" type="Line2D" parent="StaticBody2D" unique_id=1772021855]
+points = PackedVector2Array(100000.01, 44700004, 115500010, 45900004, 115700010, 63500004, 1100000.1, 62800004, 200000.02, 46600004, 100000.01, 44900004)
