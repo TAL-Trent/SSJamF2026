@@ -44,7 +44,7 @@ func _input(event):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	setMessage("I decided to get rid of those placeholder images, they were a bit tacky.")
+	setMessage("I decided to get rid of those default images, they were a bit tacky so i replaced them with my own art")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

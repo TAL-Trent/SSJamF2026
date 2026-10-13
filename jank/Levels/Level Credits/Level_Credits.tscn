@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://2rbmisyfr1l7"]
+[gd_scene format=3 uid="uid://df3v6i0ndf81p"]
 
-[ext_resource type="Script" uid="uid://wnh7s62tallj" path="res://Levels/Main Menu/Main_Menu_Script.gd" id="1_nwbpd"]
+[ext_resource type="Script" uid="uid://c6n5mxa0b54fl" path="res://Levels/Level Credits/Level_Credits.gd" id="1_drd81"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cxiam"]
 size = Vector2(1125, 30)
@@ -9,7 +9,7 @@ size = Vector2(1125, 30)
 size = Vector2(31, 636)
 
 [node name="Node2D" type="Node2D" unique_id=965193724]
-script = ExtResource("1_nwbpd")
+script = ExtResource("1_drd81")
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1060266912]
 position = Vector2(880, 168)
@@ -63,13 +63,13 @@ polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.104
 position = Vector2(-303.5, 477)
 shape = SubResource("RectangleShape2D_cxiam")
 
-[node name="Button1" type="Polygon2D" parent="." unique_id=281212638]
-position = Vector2(685, 278)
+[node name="Plat" type="Polygon2D" parent="." unique_id=281212638]
+position = Vector2(677, 518)
 scale = Vector2(0.40659198, 0.891485)
 color = Color(0.6073017, 0.60730165, 0.60730165, 1)
 polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
 
-[node name="Button" type="Button" parent="Button1" unique_id=1636997204]
+[node name="Button" type="Button" parent="Plat" unique_id=1636997204]
 z_index = -1
 offset_left = -482.05566
 offset_top = 20.19107
@@ -77,32 +77,52 @@ offset_right = -14.337036
 offset_bottom = 78.56387
 metadata/_edit_use_anchors_ = true
 
-[node name="Polygon2D" type="Polygon2D" parent="Button1" unique_id=180371370]
-polygon = PackedVector2Array(-445.1637, 17.94757, -450.08264, 76.27722, -430.40686, 77.39896, -427.9474, 49.355865, -388.59595, 47.112396, -376.29858, 32.53, -388.59595, 20.19104)
+[node name="Polygon2D" type="Polygon2D" parent="Plat" unique_id=2062307545]
+polygon = PackedVector2Array(-459.92053, 7.852051, -467.29895, 80.7641, -420.5691, 78.52063, -388.59595, 70.66858, -391.05542, 53.842712, -410.7312, 47.112366, -427.9475, 40.38208, -403.35278, 31.408264, -400.8933, 15.704102, -423.02856, 10.09552, -432.86646, 5.6086426)
 
-[node name="Polygon2D" type="Polygon2D" parent="Button1/Polygon2D" unique_id=2114204437]
+[node name="Polygon2D" type="Polygon2D" parent="Plat/Polygon2D" unique_id=1905851504]
+position = Vector2(-1665.0598, -581.0529)
+scale = Vector2(2.459468, 1.1217238)
 color = Color(0.6039216, 0.6039216, 0.6039216, 1)
-polygon = PackedVector2Array(-432.86633, 24.677917, -432.86633, 45.990692, -398.43372, 43.747223, -388.59595, 33.651733, -398.43372, 24.677917)
+polygon = PackedVector2Array(494, 530, 494, 550, 502, 548, 507, 541, 507, 532, 501, 527, 495, 527, 494, 529)
 
-[node name="Polygon2D2" type="Polygon2D" parent="Button1/Polygon2D" unique_id=1583207641]
-polygon = PackedVector2Array(-341.86597, 22.434479, -354.16333, 77.39896, -302.51453, 77.39896, -304.974, 70.66861, -334.48755, 68.42514, -327.10925, 19.069305)
-
-[node name="Polygon2D3" type="Polygon2D" parent="Button1/Polygon2D" unique_id=570127850]
-polygon = PackedVector2Array(-218.89258, 23.556213, -265.62256, 75.15549, -245.94678, 76.27722, -218.89258, 52.72101, -184.46008, 52.72101, -164.7843, 76.27722, -145.10852, 76.27722, -199.21692, 10.09552)
-
-[node name="Polygon2D" type="Polygon2D" parent="Button1/Polygon2D/Polygon2D3" unique_id=1153255506]
+[node name="Polygon2D2" type="Polygon2D" parent="Plat/Polygon2D" unique_id=1641140090]
 color = Color(0.6039216, 0.6039216, 0.6039216, 1)
-polygon = PackedVector2Array(-204.13586, 24.677917, -218.89258, 43.747223, -186.91956, 43.747223)
+polygon = PackedVector2Array(-452.5421, 45.99066, -455.0016, 74.03375, -427.9475, 72.91205, -413.19067, 67.303406, -413.19067, 56.08618, -430.40698, 50.47754, -440.24475, 44.868958, -452.5421, 44.868958)
 
-[node name="Polygon2D4" type="Polygon2D" parent="Button1/Polygon2D" unique_id=132063569]
-polygon = PackedVector2Array(-110.676025, 20.19104, -81.16235, 39.260345, -125.43286, 70.66861, -105.75708, 75.15549, -29.51355, 20.19104, -46.72986, 20.19104, -68.86511, 32.53, -98.37866, 17.94757)
+[node name="Polygon2D2" type="Polygon2D" parent="Plat" unique_id=1883660803]
+polygon = PackedVector2Array(-292.67676, 14.582397, -359.0824, 79.642395, -332.0282, 78.52063, -302.51465, 51.599304, -263.1631, 50.47754, -233.64954, 76.27722, -211.51428, 74.03375, -287.7578, 12.338928)
+
+[node name="Polygon2D" type="Polygon2D" parent="Plat/Polygon2D2" unique_id=801372118]
+color = Color(0.6039216, 0.6039216, 0.6039216, 1)
+polygon = PackedVector2Array(-292.67676, 23.556213, -304.97412, 44.868958, -265.62256, 44.868958, -290.2173, 16.825867)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Plat" unique_id=1524049528]
+position = Vector2(14.756807, 7.8520665)
+polygon = PackedVector2Array(-150.02759, 25.799622, -135.27075, 20.19104, -162.32495, 10.09552, -191.8385, 11.217224, -213.97375, 21.312744, -226.27112, 39.260315, -211.51428, 49.355835, -194.29797, 56.08618, -162.32495, 65.06, -140.1897, 63.938232, -140.1897, 53.842712, -172.16284, 49.355835, -194.29797, 42.62549, -189.37903, 25.799683, -172.16284, 22.434448)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Plat" unique_id=2080939557]
+polygon = PackedVector2Array(-95.91931, 15.704102, -100.83826, 77.398926, -86.08142, 77.398926, -81.162476, 48.23413, -44.270508, 77.398926, -24.594727, 71.790344, -73.78406, 39.260315, -29.513672, 17.94757, -44.270508, 13.460693, -83.62195, 32.52997, -81.162476, 8.973816, -95.91931, 6.7303467)
 
 [node name="Label" type="Label" parent="." unique_id=2133635674]
-offset_left = 486.0
-offset_top = 21.0
-offset_right = 756.0
-offset_bottom = 145.0
+offset_left = 319.0
+offset_top = 25.0
+offset_right = 839.0
+offset_bottom = 149.0
 theme_override_font_sizes/font_size = 90
-text = "Jank"
+text = "Jank Credits"
 
-[connection signal="pressed" from="Button1/Button" to="." method="_on_button_pressed" binds= ["1"]]
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1035277025]
+offset_left = 411.0
+offset_top = 213.0
+offset_right = 744.0
+offset_bottom = 435.0
+text = "Game Designers:
+Anthony and Trenton
+Artists:
+
+Sound Designers:
+
+This project was made for the small scope game jam"
+
+[connection signal="pressed" from="Plat/Button" to="." method="_on_button_pressed" binds= ["1"]]

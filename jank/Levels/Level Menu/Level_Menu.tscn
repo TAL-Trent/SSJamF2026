@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://2rbmisyfr1l7"]
+
+[ext_resource type="Script" uid="uid://wnh7s62tallj" path="res://Levels/Level Menu/Level_Menu_Script.gd" id="1_37dri"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cxiam"]
+size = Vector2(1125, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2v4n4"]
+size = Vector2(31, 636)
+
+[node name="Node2D" type="Node2D" unique_id=965193724]
+script = ExtResource("1_37dri")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1060266912]
+position = Vector2(880, 168)
+
+[node name="Polygon2D" type="Polygon2D" parent="Floor" unique_id=1738322572]
+position = Vector2(258.6361, 451.14447)
+scale = Vector2(2.3022308, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1904054581]
+position = Vector2(-303.5, 477)
+shape = SubResource("RectangleShape2D_cxiam")
+
+[node name="wallLeft" type="StaticBody2D" parent="." unique_id=1933933877]
+position = Vector2(880, 168)
+
+[node name="Polygon2D" type="Polygon2D" parent="wallLeft" unique_id=1698824866]
+position = Vector2(-835.1139, -172.69963)
+scale = Vector2(0.060113497, 7.0222216)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallLeft" unique_id=437923831]
+position = Vector2(-847.5, 169)
+shape = SubResource("RectangleShape2D_2v4n4")
+
+[node name="wallLeft2" type="StaticBody2D" parent="." unique_id=930569930]
+position = Vector2(1993, 156)
+
+[node name="Polygon2D" type="Polygon2D" parent="wallLeft2" unique_id=1263886810]
+position = Vector2(-835.1139, -172.69963)
+scale = Vector2(0.060113497, 7.0222216)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallLeft2" unique_id=1145334264]
+position = Vector2(-847.5, 169)
+shape = SubResource("RectangleShape2D_2v4n4")
+
+[node name="Floor2" type="StaticBody2D" parent="." unique_id=103161666]
+position = Vector2(882, -457)
+
+[node name="Polygon2D" type="Polygon2D" parent="Floor2" unique_id=83244311]
+position = Vector2(258.6361, 451.14447)
+scale = Vector2(2.3022308, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2" unique_id=1423467569]
+position = Vector2(-303.5, 477)
+shape = SubResource("RectangleShape2D_cxiam")
+
+[node name="Plat" type="Polygon2D" parent="." unique_id=281212638]
+position = Vector2(685, 278)
+scale = Vector2(0.40659198, 0.891485)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="Button" type="Button" parent="Plat" unique_id=1636997204]
+z_index = -1
+offset_left = -482.05566
+offset_top = 20.19107
+offset_right = -14.337036
+offset_bottom = 78.56387
+metadata/_edit_use_anchors_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Plat" unique_id=180371370]
+polygon = PackedVector2Array(-445.1637, 17.94757, -450.08264, 76.27722, -430.40686, 77.39896, -427.9474, 49.355865, -388.59595, 47.112396, -376.29858, 32.53, -388.59595, 20.19104)
+
+[node name="Polygon2D" type="Polygon2D" parent="Plat/Polygon2D" unique_id=2114204437]
+color = Color(0.6039216, 0.6039216, 0.6039216, 1)
+polygon = PackedVector2Array(-432.86633, 24.677917, -432.86633, 45.990692, -398.43372, 43.747223, -388.59595, 33.651733, -398.43372, 24.677917)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Plat/Polygon2D" unique_id=1583207641]
+polygon = PackedVector2Array(-341.86597, 22.434479, -354.16333, 77.39896, -302.51453, 77.39896, -304.974, 70.66861, -334.48755, 68.42514, -327.10925, 19.069305)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Plat/Polygon2D" unique_id=570127850]
+polygon = PackedVector2Array(-218.89258, 23.556213, -265.62256, 75.15549, -245.94678, 76.27722, -218.89258, 52.72101, -184.46008, 52.72101, -164.7843, 76.27722, -145.10852, 76.27722, -199.21692, 10.09552)
+
+[node name="Polygon2D" type="Polygon2D" parent="Plat/Polygon2D/Polygon2D3" unique_id=1153255506]
+color = Color(0.6039216, 0.6039216, 0.6039216, 1)
+polygon = PackedVector2Array(-204.13586, 24.677917, -218.89258, 43.747223, -186.91956, 43.747223)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Plat/Polygon2D" unique_id=132063569]
+polygon = PackedVector2Array(-110.676025, 20.19104, -81.16235, 39.260345, -125.43286, 70.66861, -105.75708, 75.15549, -29.51355, 20.19104, -46.72986, 20.19104, -68.86511, 32.53, -98.37866, 17.94757)
+
+[node name="Credits" type="Polygon2D" parent="." unique_id=1424182163]
+position = Vector2(720.9542, 370.95438)
+scale = Vector2(0.55172414, 0.86018974)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="Button" type="Button" parent="Credits" unique_id=1901598171]
+z_index = -1
+offset_left = -482.05566
+offset_top = 20.19107
+offset_right = -14.337036
+offset_bottom = 78.56387
+metadata/_edit_use_anchors_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Credits" unique_id=1220082532]
+polygon = PackedVector2Array(-407.7295, 23.30371, -436.7295, 12.840912, -456.667, 24.466248, -456.667, 68.64255, -429.4795, 76.780304, -414.9795, 67.48001, -431.292, 69.805084, -447.6045, 65.15497, -445.792, 26.79132, -434.917, 22.141205, -404.1045, 30.27893)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Credits" unique_id=242800920]
+position = Vector2(-16.22953, 4.703176)
+polygon = PackedVector2Array(-371.4795, 22.141205, -378.7295, 73.292694, -364.2295, 73.292694, -358.792, 24.466248, -344.292, 18.653595, -326.167, 30.27893, -326.167, 38.416656, -313.4795, 30.27893, -337.042, 11.678375, -355.167, 11.678375)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Credits" unique_id=975673949]
+position = Vector2(-16.22953, 2.3781078)
+polygon = PackedVector2Array(-300.792, 22.141205, -309.8545, 74.45523, -277.2295, 74.45523, -277.2295, 63.99243, -297.167, 65.15497, -295.3545, 50.042023, -273.6045, 50.042023, -273.6045, 43.066803, -293.542, 43.066803, -291.7295, 32.604004, -271.792, 32.604004, -269.9795, 22.141205)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Credits" unique_id=1753103928]
+polygon = PackedVector2Array(-262.7295, 20.978668, -268.167, 82.59299, -235.54199, 79.10538, -210.16699, 66.317505, -204.72949, 50.042023, -208.35449, 33.76654, -222.85449, 27.953857, -242.79199, 20.978668)
+
+[node name="Polygon2D" type="Polygon2D" parent="Credits/Polygon2D4" unique_id=1165312822]
+color = Color(0.6039216, 0.6039216, 0.6039216, 1)
+polygon = PackedVector2Array(-253.66699, 31.441467, -257.292, 74.45523, -237.35449, 69.805084, -224.66699, 61.66736, -224.66699, 48.879486, -230.10449, 37.25415, -242.79199, 31.441467)
+
+[node name="Polygon2D5" type="Polygon2D" parent="Credits" unique_id=588988622]
+polygon = PackedVector2Array(-175.72949, 29.116394, -177.54199, 68.64255, -195.66699, 69.805084, -195.66699, 75.61777, -146.72949, 74.45523, -146.72949, 66.317505, -164.85449, 67.48001, -164.85449, 27.953857, -141.29199, 27.953857, -141.29199, 18.653595, -199.29199, 19.816132, -199.29199, 26.79132)
+
+[node name="Polygon2D6" type="Polygon2D" parent="Credits" unique_id=1361574776]
+polygon = PackedVector2Array(-114.10449, 33.76654, -115.91699, 73.292694, -103.22949, 73.292694, -101.41699, 32.604004, -77.85449, 32.604004, -77.85449, 24.466248, -134.04199, 24.466248, -134.04199, 33.76654)
+
+[node name="Polygon2D7" type="Polygon2D" parent="Credits" unique_id=1331784319]
+position = Vector2(-3.5420303, 11.678382)
+polygon = PackedVector2Array(-21.666992, 26.79132, -37.979492, 17.491058, -56.104492, 22.141205, -65.16699, 32.604004, -50.666992, 36.091614, -43.416992, 38.416656, -28.916992, 43.066803, -25.291992, 54.69214, -36.166992, 62.829895, -52.479492, 63.99243, -68.79199, 59.342285, -74.22949, 57.017212, -68.79199, 51.20456, -59.729492, 54.69214, -47.041992, 54.69214, -36.166992, 52.367096, -43.416992, 46.554413, -63.354492, 43.066803, -74.22949, 36.091614, -70.60449, 27.953857, -63.354492, 18.653595, -47.041992, 11.678375, -30.729492, 12.840912, -18.041992, 16.328522, -9.0625, 23.250702)
+
+[node name="Label" type="Label" parent="." unique_id=2133635674]
+offset_left = 486.0
+offset_top = 21.0
+offset_right = 756.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 90
+text = "Jank"
+
+[connection signal="pressed" from="Plat/Button" to="." method="_on_button_pressed" binds= ["1"]]
+[connection signal="pressed" from="Credits/Button" to="." method="_on_credits_pressed"]
