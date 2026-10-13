@@ -3,6 +3,12 @@ extends Node
 @export var Player: RigidBody2D
 @export var PlayerSprite: Sprite2D
 @export var EolTrigger: Area2D
+@export var textChat: RichTextLabel
+
+var isTyping = false
+var finishedMessage = ""
+var currentMessage = ""
+var messageChar = 0
 
 func _input(event):
 	if event.is_action_pressed("jump"):
@@ -30,13 +36,28 @@ func _input(event):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	setMessage("Hey! Welcome to my physics sandbox!")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	PlayerSprite.global_position = Player.global_position
+	typeChat()
 
 #called when the player touches the end of level trigger
 func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	print("End Level")
+	setMessage("Nice job!")
+func typeChat():
+	if !(finishedMessage == currentMessage):
+		textChat.text = currentMessage + finishedMessage[messageChar]
+		messageChar+=1
+		currentMessage = textChat.text
+	else:
+		messageChar = 0
+		
+func setMessage(message: String):
+	textChat.text = ""
+	currentMessage = ""
+	finishedMessage = message
+	messageChar = 0

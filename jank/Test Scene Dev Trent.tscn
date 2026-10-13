@@ -18,11 +18,12 @@ size = Vector2(126, 30)
 [sub_resource type="CircleShape2D" id="CircleShape2D_oym00"]
 radius = 86.833176
 
-[node name="Node2D" type="Node2D" unique_id=965193724 node_paths=PackedStringArray("Player", "PlayerSprite", "EolTrigger")]
+[node name="Node2D" type="Node2D" unique_id=965193724 node_paths=PackedStringArray("Player", "PlayerSprite", "EolTrigger", "textChat")]
 script = ExtResource("1_jkau5")
 Player = NodePath("Player")
 PlayerSprite = NodePath("Player2dSprite")
 EolTrigger = NodePath("Area2D")
+textChat = NodePath("RichTextLabel")
 
 [node name="Player2dSprite" type="Sprite2D" parent="." unique_id=1676920389]
 position = Vector2(268, 190)
@@ -163,5 +164,15 @@ polygon = PackedVector2Array(1118, 42, 1135, 42, 1134, 142, 1117, 142)
 [node name="Polygon2D" type="Polygon2D" parent="Area2D" unique_id=450298845]
 color = Color(0.955715, 0.5051854, 7.70092e-07, 1)
 polygon = PackedVector2Array(1118, 42, 1135, 42, 1134, 142, 1117, 142)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=729345683]
+offset_left = 99.0
+offset_top = 32.0
+offset_right = 1036.0
+offset_bottom = 88.0
+localize_numeral_system = false
+text = "Hello World!"
+scroll_active = false
+shortcut_keys_enabled = false
 
 [connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
