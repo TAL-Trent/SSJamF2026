@@ -38,5 +38,5 @@ func _process(delta: float) -> void:
 	PlayerSprite.global_position = Player.global_position
 
 #(broken)called when the player touches the end of level trigger
-func _on_area_2d_area_entered(shape: CollisionShape2D) -> void:
-	print("level exit entered")
+func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	print("End Level") # Replace with function body.

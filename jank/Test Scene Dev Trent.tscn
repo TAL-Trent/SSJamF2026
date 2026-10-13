@@ -38,6 +38,12 @@ constant_torque = 2.13
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_cxiam")
 
+[node name="playerarea2D" type="Area2D" parent="Player" unique_id=1979979719]
+position = Vector2(0, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/playerarea2D" unique_id=200249450]
+shape = SubResource("CircleShape2D_cxiam")
+
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1060266912]
 position = Vector2(880, 168)
 
@@ -158,4 +164,4 @@ polygon = PackedVector2Array(1118, 42, 1135, 42, 1134, 142, 1117, 142)
 color = Color(0.955715, 0.5051854, 7.70092e-07, 1)
 polygon = PackedVector2Array(1118, 42, 1135, 42, 1134, 142, 1117, 142)
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
