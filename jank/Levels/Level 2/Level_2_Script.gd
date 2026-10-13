@@ -52,9 +52,10 @@ func _process(delta: float) -> void:
 #called when the player touches the end of level trigger
 func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	print("EOL trigger touched")
-	await get_tree().create_timer(0.2).timeout
 	setMessage("Nice job!")
+	await get_tree().create_timer(0.5).timeout
 	print("next level")
+	get_tree().change_scene_to_file("res://Levels/Level 3/Level_3.tscn")
 
 func typeChat():
 	if !(finishedMessage == currentMessage):

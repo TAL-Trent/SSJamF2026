@@ -40,7 +40,7 @@ func _input(event):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	setMessage("Hey! Welcome to my physics sandbox!")
+	setMessage("Hey! Welcome to my physics sandbox! You can use the arrow keys to move, and the spacebar to jump!")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
