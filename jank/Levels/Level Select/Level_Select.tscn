@@ -98,12 +98,70 @@ metadata/_edit_use_anchors_ = true
 polygon = PackedVector2Array(-231.75244, 13.898285, -185.40198, 16.677948, -164.33362, 33.355865, -181.18823, 55.59311, -198.04297, 63.932083, -168.54724, 63.932083, -172.76086, 72.27106, -257.03455, 72.27106, -248.60718, 63.932083, -223.32507, 63.932083, -206.47034, 52.81346, -202.25671, 36.13553, -223.32507, 25.016907, -244.39355, 22.237244)
 
 [node name="Label" type="Label" parent="." unique_id=2133635674]
-offset_left = 486.0
-offset_top = 21.0
-offset_right = 756.0
-offset_bottom = 145.0
+offset_left = 480.0
+offset_top = 15.0
+offset_right = 750.0
+offset_bottom = 139.0
 theme_override_font_sizes/font_size = 90
 text = "Levels"
 
+[node name="Button3" type="Polygon2D" parent="." unique_id=774470141]
+position = Vector2(524, 154.00002)
+scale = Vector2(0.2373221, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -149.9972, 5.138153, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="Button" type="Button" parent="Button3" unique_id=1386364450]
+z_index = -1
+offset_left = -480.35965
+offset_top = 16.677876
+offset_right = -12.64093
+offset_bottom = 75.05067
+metadata/_edit_use_anchors_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Button3" unique_id=1376312356]
+position = Vector2(-8.427364, -5.5593534)
+polygon = PackedVector2Array(-261.2483, 19.45755, -223.3252, 36.135468, -235.96619, 50.033752, -219.11145, 66.7117, -252.82092, 83.38962, -265.46204, 80.609955, -235.96619, 66.7117, -252.82092, 52.813416, -235.96619, 38.91513, -273.8894, 25.016846)
+
+[node name="Button4" type="Polygon2D" parent="." unique_id=678903496]
+position = Vector2(675, 153)
+scale = Vector2(0.2373221, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -149.9972, 5.138153, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="Button" type="Button" parent="Button4" unique_id=113498508]
+z_index = -1
+offset_left = -467.71875
+offset_top = 19.457573
+offset_right = -3.0517578e-05
+offset_bottom = 77.83037
+metadata/_edit_use_anchors_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Button4" unique_id=266563822]
+position = Vector2(37.922882, -2.779698)
+polygon = PackedVector2Array(-324.4536, 19.45755, -324.4536, 41.694794, -324.4536, 55.59308, -286.53052, 55.59308, -290.7444, 75.05066, -265.46216, 75.05066, -265.46216, 27.79654, -269.67578, 19.45755, -282.3169, 19.45755, -290.7444, 47.25412, -307.59888, 44.474457, -307.59888, 19.45755)
+
+[node name="Button5" type="Polygon2D" parent="." unique_id=33904806]
+position = Vector2(829, 153.00002)
+scale = Vector2(0.2373221, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -149.9972, 5.138153, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="Button" type="Button" parent="Button5" unique_id=331717193]
+z_index = -1
+offset_left = -471.93243
+offset_top = 19.457531
+offset_right = -4.213745
+offset_bottom = 77.83032
+metadata/_edit_use_anchors_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Button5" unique_id=142907152]
+position = Vector2(16.854729, -8.339008)
+polygon = PackedVector2Array(-219.68484, 15.33228, -252.82104, 16.677887, -286.53052, 19.45755, -286.53052, 47.25412, -248.60742, 52.813416, -231.75269, 61.152374, -244.39355, 69.49136, -282.31665, 69.49136, -273.8894, 83.38962, -206.47046, 80.609955, -206.47046, 47.25412, -257.03467, 36.135468, -257.03467, 27.796509, -206.69829, 25.119255)
+uv = PackedVector2Array(-189.61572, 22.237213, -252.82104, 16.677887, -286.53052, 19.45755, -286.53052, 47.25412, -248.60742, 52.813416, -231.75269, 61.152374, -244.39355, 69.49136, -282.31665, 69.49136, -273.8894, 83.38962, -206.47046, 80.609955, -206.47046, 47.25412, -257.03467, 36.135468, -257.03467, 27.796509, -185.4021, 30.576172)
+
 [connection signal="pressed" from="Button1/Button" to="." method="_on_button_pressed" binds= ["1"]]
 [connection signal="pressed" from="Button2/Button" to="." method="_on_button_pressed" binds= ["2"]]
+[connection signal="pressed" from="Button3/Button" to="." method="_on_button_pressed" binds= ["3"]]
+[connection signal="pressed" from="Button4/Button" to="." method="_on_button_pressed" binds= ["4"]]
+[connection signal="pressed" from="Button5/Button" to="." method="_on_button_pressed" binds= ["5"]]

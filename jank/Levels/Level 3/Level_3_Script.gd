@@ -20,7 +20,6 @@ func _input(event):
 		#Player.apply_force(myForce)
 		if isTouchingFloor():
 			Player.apply_impulse(myForce);
-			print("Jumped!")
 		else:
 			if !airJumped:
 				myForce.y = -5000
@@ -60,7 +59,7 @@ func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_inde
 	setMessage("Nice job!")
 	await get_tree().create_timer(0.5).timeout
 	print("next level")
-
+	get_tree().change_scene_to_file("res://Levels/Level 4/Level_4.tscn")
 func typeChat():
 	if !(finishedMessage == currentMessage):
 		textChat.text = currentMessage + finishedMessage[messageChar]

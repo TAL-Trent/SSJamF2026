@@ -21,7 +21,6 @@ func _input(event):
 		#Player.apply_force(myForce)
 		if isTouchingFloor():
 			Player.apply_impulse(myForce);
-			print("Jumped!")
 	if event.is_action_pressed("left"):
 		var myForce: Vector2
 		myForce.x = -200;
