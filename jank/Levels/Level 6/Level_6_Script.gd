@@ -56,15 +56,17 @@ func _process(delta: float) -> void:
 	if (isTouchingFloor() and (airJumped == true)):
 		airJumped = false
 	if skewing:
-		if (brokenBall.skew == 89):
-			brokenBall.skew == -89
-		else:
-			brokenBall.skew += 1
+		brokenBall.skew = randi_range(-89,89)
 			
 #called when the player touches the end of level trigger
 func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	print("EOL trigger touched")
-	setMessage("Nice job!")
+	if (timesBroken < 2):
+		setMessage("Nice Job!")
+	elif (timesBroken == 2):
+		setMessage("congrats.")
+	else:
+		setMessage("screw you.")
 	await get_tree().create_timer(0.5).timeout
 	print("next level")
 
@@ -94,6 +96,7 @@ func _on_ball_body_entered(body: Node) -> void:
 		await get_tree().create_timer(1.5).timeout
 		if (timesBroken == 1):
 			setMessage("How did you even do that.")
+			await get_tree().create_timer(1.5).timeout
 			setMessage("Let me fix it...")
 			await get_tree().create_timer(3).timeout
 			skewing = false
