@@ -5,6 +5,8 @@ extends Node
 @export var EolTrigger: Area2D
 @export var textChat: RichTextLabel
 
+var textDelay = 10
+
 var isTyping = false
 var finishedMessage = ""
 var currentMessage = ""
@@ -47,7 +49,7 @@ func _process(delta: float) -> void:
 #called when the player touches the end of level trigger
 func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	print("End Level")
-	setMessage("Nice job!")
+	await setMessage("Nice job!")
 func typeChat():
 	if !(finishedMessage == currentMessage):
 		textChat.text = currentMessage + finishedMessage[messageChar]
