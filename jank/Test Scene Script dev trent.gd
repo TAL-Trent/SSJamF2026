@@ -4,6 +4,7 @@ extends Node
 @export var PlayerSprite: Sprite2D
 @export var EolTrigger: Area2D
 @export var textChat: RichTextLabel
+@export var playerRay: RayCast2D
 
 var textDelay = 10
 
@@ -18,8 +19,9 @@ func _input(event):
 		myForce.x = 0;
 		myForce.y = -500;
 		#Player.apply_force(myForce)
-		Player.apply_impulse(myForce);
-		print("Jumped!")
+		if isTouchingFloor():
+			Player.apply_impulse(myForce);
+			print("Jumped!")
 	if event.is_action_pressed("left"):
 		var myForce: Vector2
 		myForce.x = -200;
@@ -63,3 +65,6 @@ func setMessage(message: String):
 	currentMessage = ""
 	finishedMessage = message
 	messageChar = 0
+
+func isTouchingFloor() -> bool:
+	return playerRay.is_colliding()

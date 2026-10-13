@@ -18,17 +18,23 @@ size = Vector2(126, 30)
 [sub_resource type="CircleShape2D" id="CircleShape2D_oym00"]
 radius = 86.833176
 
-[node name="Node2D" type="Node2D" unique_id=965193724 node_paths=PackedStringArray("Player", "PlayerSprite", "EolTrigger", "textChat")]
+[node name="Node2D" type="Node2D" unique_id=965193724 node_paths=PackedStringArray("Player", "PlayerSprite", "EolTrigger", "textChat", "playerRay")]
 script = ExtResource("1_jkau5")
 Player = NodePath("Player")
 PlayerSprite = NodePath("Player2dSprite")
 EolTrigger = NodePath("Area2D")
 textChat = NodePath("RichTextLabel")
+playerRay = NodePath("Player2dSprite/RayCast2D")
 
 [node name="Player2dSprite" type="Sprite2D" parent="." unique_id=1676920389]
 position = Vector2(268, 190)
 scale = Vector2(0.2304688, 0.3125001)
 texture = ExtResource("2_h7ysx")
+
+[node name="RayCast2D" type="RayCast2D" parent="Player2dSprite" unique_id=1973953240]
+position = Vector2(0, -9.599976)
+scale = Vector2(4.338982, 3.199999)
+target_position = Vector2(0, 23)
 
 [node name="Player" type="RigidBody2D" parent="." unique_id=272158072]
 position = Vector2(268, 187)
