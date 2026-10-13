@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bx0672p7j8art"]
 
-[ext_resource type="Script" uid="uid://crsipjx7tib4" path="res://Levels/Main Menu/Main Menu Script.gd" id="1_qns85"]
+[ext_resource type="Script" uid="uid://crsipjx7tib4" path="res://Levels/Level Select/Level_Select_Script.gd" id="1_xhmbo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cxiam"]
 size = Vector2(1125, 30)
@@ -9,7 +9,7 @@ size = Vector2(1125, 30)
 size = Vector2(31, 636)
 
 [node name="Node2D" type="Node2D" unique_id=965193724]
-script = ExtResource("1_qns85")
+script = ExtResource("1_xhmbo")
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1060266912]
 position = Vector2(880, 168)
@@ -64,7 +64,7 @@ position = Vector2(-303.5, 477)
 shape = SubResource("RectangleShape2D_cxiam")
 
 [node name="Button1" type="Polygon2D" parent="." unique_id=281212638]
-position = Vector2(198, 61)
+position = Vector2(199.54994, 156.14444)
 scale = Vector2(0.2373221, 0.3597568)
 color = Color(0.6073017, 0.60730165, 0.60730165, 1)
 polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
@@ -75,12 +75,13 @@ offset_left = -476.1461
 offset_top = 16.677917
 offset_right = -8.427399
 offset_bottom = 75.050705
+metadata/_edit_use_anchors_ = true
 
 [node name="Polygon2D" type="Polygon2D" parent="Button1" unique_id=1201232567]
 polygon = PackedVector2Array(-299.17145, 72.27103, -206.47046, 72.27103, -206.47046, 61.152405, -231.7525, 61.152405, -235.96619, 11.118622, -273.88934, 22.237244, -269.67566, 30.576202, -248.60724, 22.237244, -252.82092, 58.372757, -294.95776, 61.152405)
 
 [node name="Button2" type="Polygon2D" parent="." unique_id=1793766741]
-position = Vector2(360, 59)
+position = Vector2(361.54996, 154.14444)
 scale = Vector2(0.2373221, 0.3597568)
 color = Color(0.6073017, 0.60730165, 0.60730165, 1)
 polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
@@ -91,9 +92,18 @@ offset_left = -476.1461
 offset_top = 16.677917
 offset_right = -8.427399
 offset_bottom = 75.050705
+metadata/_edit_use_anchors_ = true
 
 [node name="Polygon2D" type="Polygon2D" parent="Button2" unique_id=354308063]
 polygon = PackedVector2Array(-231.75244, 13.898285, -185.40198, 16.677948, -164.33362, 33.355865, -181.18823, 55.59311, -198.04297, 63.932083, -168.54724, 63.932083, -172.76086, 72.27106, -257.03455, 72.27106, -248.60718, 63.932083, -223.32507, 63.932083, -206.47034, 52.81346, -202.25671, 36.13553, -223.32507, 25.016907, -244.39355, 22.237244)
+
+[node name="Label" type="Label" parent="." unique_id=2133635674]
+offset_left = 486.0
+offset_top = 21.0
+offset_right = 756.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 90
+text = "Levels"
 
 [connection signal="pressed" from="Button1/Button" to="." method="_on_button_pressed" binds= ["1"]]
 [connection signal="pressed" from="Button2/Button" to="." method="_on_button_pressed" binds= ["2"]]
