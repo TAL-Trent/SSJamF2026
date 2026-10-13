@@ -201,9 +201,31 @@ polygon = PackedVector2Array(-150.02759, 25.799622, -135.27075, 20.19104, -162.3
 [node name="Polygon2D4" type="Polygon2D" parent="Back" unique_id=227657523]
 polygon = PackedVector2Array(-95.91931, 15.704102, -100.83826, 77.398926, -86.08142, 77.398926, -81.162476, 48.23413, -44.270508, 77.398926, -24.594727, 71.790344, -73.78406, 39.260315, -29.513672, 17.94757, -44.270508, 13.460693, -83.62195, 32.52997, -81.162476, 8.973816, -95.91931, 6.7303467)
 
+[node name="Button6" type="Polygon2D" parent="." unique_id=1078362319]
+position = Vector2(966, 152)
+scale = Vector2(0.19472617, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -149.9972, 5.138153, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="Button" type="Button" parent="Button6" unique_id=1328237977]
+z_index = -1
+offset_left = -467.32297
+offset_top = 16.677917
+offset_right = 0.39572144
+offset_bottom = 75.050705
+metadata/_edit_use_anchors_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Button6" unique_id=1358815845]
+polygon = PackedVector2Array(-195.146, 27.79657, -225.9585, 16.677948, -267.042, 19.45758, -282.44824, 41.694855, -282.44824, 69.491394, -251.63574, 72.27106, -200.28125, 72.27106, -205.41699, 50.033813, -231.09375, 36.13553, -261.90625, 36.13553, -236.22949, 25.016907, -215.6875, 27.79657, -195.146, 33.355865)
+
+[node name="Polygon2D" type="Polygon2D" parent="Button6/Polygon2D" unique_id=40067241]
+color = Color(0.6039216, 0.6039216, 0.6039216, 1)
+polygon = PackedVector2Array(-225.9585, 55.59311, -236.22949, 47.25415, -256.771, 44.474487, -267.042, 58.372772, -251.63574, 63.9321, -231.09375, 63.9321)
+
 [connection signal="pressed" from="Button1/Button" to="." method="_on_button_pressed" binds= ["1"]]
 [connection signal="pressed" from="Button2/Button" to="." method="_on_button_pressed" binds= ["2"]]
 [connection signal="pressed" from="Button3/Button" to="." method="_on_button_pressed" binds= ["3"]]
 [connection signal="pressed" from="Button4/Button" to="." method="_on_button_pressed" binds= ["4"]]
 [connection signal="pressed" from="Button5/Button" to="." method="_on_button_pressed" binds= ["5"]]
 [connection signal="pressed" from="Back/Button" to="." method="_on_button_pressed" binds= ["Menu"]]
+[connection signal="pressed" from="Button6/Button" to="." method="_on_button_pressed" binds= ["6"]]
