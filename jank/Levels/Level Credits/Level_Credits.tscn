@@ -119,10 +119,16 @@ offset_right = 744.0
 offset_bottom = 435.0
 text = "Game Designers:
 Anthony and Trenton
-Artists:
 
-Sound Designers:
 
-This project was made for the small scope game jam"
+This project was made for the small scope game jam using godot, which uses the MIT license. You can find a copy of said license"
+
+[node name="LinkButton" type="LinkButton" parent="." unique_id=1116117937]
+offset_left = 413.0
+offset_top = 370.0
+offset_right = 534.0
+offset_bottom = 393.0
+text = "Here"
+uri = "https://godotengine.org/license/"
 
 [connection signal="pressed" from="Plat/Button" to="." method="_on_button_pressed" binds= ["1"]]

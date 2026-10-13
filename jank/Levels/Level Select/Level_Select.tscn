@@ -222,6 +222,24 @@ polygon = PackedVector2Array(-195.146, 27.79657, -225.9585, 16.677948, -267.042,
 color = Color(0.6039216, 0.6039216, 0.6039216, 1)
 polygon = PackedVector2Array(-225.9585, 55.59311, -236.22949, 47.25415, -256.771, 44.474487, -267.042, 58.372772, -251.63574, 63.9321, -231.09375, 63.9321)
 
+[node name="Button7" type="Polygon2D" parent="." unique_id=1913508534]
+position = Vector2(203, 221)
+scale = Vector2(0.2373221, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="Button" type="Button" parent="Button7" unique_id=1127043816]
+z_index = -1
+offset_left = -484.5735
+offset_top = 16.677917
+offset_right = -16.854797
+offset_bottom = 75.05069
+metadata/_edit_use_anchors_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Button7" unique_id=2146415418]
+position = Vector2(3.0517578e-05, 0)
+polygon = PackedVector2Array(-278.10303, 72.27106, -231.75256, 72.27106, -227.53888, 61.152466, -231.7525, 61.152405, -235.96619, 11.118622, -299.17145, 22.237244, -269.67566, 30.576202, -248.60724, 22.237244, -257.0346, 55.59314, -261.2483, 61.152466)
+
 [connection signal="pressed" from="Button1/Button" to="." method="_on_button_pressed" binds= ["1"]]
 [connection signal="pressed" from="Button2/Button" to="." method="_on_button_pressed" binds= ["2"]]
 [connection signal="pressed" from="Button3/Button" to="." method="_on_button_pressed" binds= ["3"]]
@@ -229,3 +247,4 @@ polygon = PackedVector2Array(-225.9585, 55.59311, -236.22949, 47.25415, -256.771
 [connection signal="pressed" from="Button5/Button" to="." method="_on_button_pressed" binds= ["5"]]
 [connection signal="pressed" from="Back/Button" to="." method="_on_button_pressed" binds= ["Menu"]]
 [connection signal="pressed" from="Button6/Button" to="." method="_on_button_pressed" binds= ["6"]]
+[connection signal="pressed" from="Button7/Button" to="." method="_on_button_pressed" binds= ["7"]]

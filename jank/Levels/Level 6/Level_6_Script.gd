@@ -47,7 +47,7 @@ func _input(event):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	setMessage("The map was really easy, so i made it a bit harder")
+	setMessage("The map was really easy, so i made it a bit harder.")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -69,7 +69,7 @@ func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_inde
 		setMessage("screw you.")
 	await get_tree().create_timer(0.5).timeout
 	print("next level")
-
+	get_tree().change_scene_to_file("res://Levels/Level 7/Level_7.tscn")
 func typeChat():
 	if !(finishedMessage == currentMessage):
 		textChat.text = currentMessage + finishedMessage[messageChar]
