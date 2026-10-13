@@ -27,21 +27,22 @@ func _input(event):
 		myForce.x = -200;
 		myForce.y = 0;
 		#Player.apply_force(myForce)
-		Player.apply_impulse(myForce);
+		if isTouchingFloor():
+			Player.apply_impulse(myForce);
 	if event.is_action_pressed("right"):
 		var myForce: Vector2
 		myForce.x = 200;
 		myForce.y = 0;
 		#Player.apply_force(myForce)
-		Player.apply_impulse(myForce);
+		if isTouchingFloor():
+			Player.apply_impulse(myForce);
 		
 		
 		
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	setMessage("Hey! Welcome to my physics sandbox!")
-
+	setMessage("I realised that you probably shouldn't be able to move in the air, that's a bit unrealistic")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -50,8 +51,11 @@ func _process(delta: float) -> void:
 
 #called when the player touches the end of level trigger
 func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
-	print("End Level")
-	await setMessage("Nice job!")
+	print("EOL trigger touched")
+	await get_tree().create_timer(0.2).timeout
+	setMessage("Nice job!")
+	print("next level")
+
 func typeChat():
 	if !(finishedMessage == currentMessage):
 		textChat.text = currentMessage + finishedMessage[messageChar]

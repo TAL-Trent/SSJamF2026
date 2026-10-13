@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://v1as2l624s3i"]
 
-[ext_resource type="Script" uid="uid://bgy5kqo7khjtv" path="res://Test Scene Script dev trent.gd" id="1_jkau5"]
-[ext_resource type="Texture2D" uid="uid://dy56y0s7l3b3y" path="res://icon.svg" id="2_h7ysx"]
+[ext_resource type="Script" uid="uid://bgy5kqo7khjtv" path="res://Levels/Level 1/Level_1_Script.gd" id="1_06p27"]
+[ext_resource type="Texture2D" uid="uid://dy56y0s7l3b3y" path="res://icon.svg" id="2_a5uli"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cxiam"]
 radius = 19.026299
@@ -19,7 +19,7 @@ size = Vector2(126, 30)
 radius = 86.833176
 
 [node name="Node2D" type="Node2D" unique_id=965193724 node_paths=PackedStringArray("Player", "PlayerSprite", "EolTrigger", "textChat", "playerRay")]
-script = ExtResource("1_jkau5")
+script = ExtResource("1_06p27")
 Player = NodePath("Player")
 PlayerSprite = NodePath("Player2dSprite")
 EolTrigger = NodePath("Area2D")
@@ -29,7 +29,7 @@ playerRay = NodePath("Player2dSprite/RayCast2D")
 [node name="Player2dSprite" type="Sprite2D" parent="." unique_id=1676920389]
 position = Vector2(268, 190)
 scale = Vector2(0.2304688, 0.3125001)
-texture = ExtResource("2_h7ysx")
+texture = ExtResource("2_a5uli")
 
 [node name="RayCast2D" type="RayCast2D" parent="Player2dSprite" unique_id=1973953240]
 position = Vector2(0, -9.599976)
@@ -140,7 +140,7 @@ shape = SubResource("CircleShape2D_oym00")
 [node name="Icon" type="Sprite2D" parent="Ball/CollisionShape2D" unique_id=869864279]
 position = Vector2(6.1035156e-05, 1.9999695)
 scale = Vector2(1.0312488, 1.0312496)
-texture = ExtResource("2_h7ysx")
+texture = ExtResource("2_a5uli")
 
 [node name="Line2D" type="Line2D" parent="Ball/CollisionShape2D" unique_id=1704672838]
 position = Vector2(-5.4247417, -3.4765828)
