@@ -240,6 +240,31 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(3.0517578e-05, 0)
 polygon = PackedVector2Array(-278.10303, 72.27106, -231.75256, 72.27106, -227.53888, 61.152466, -231.7525, 61.152405, -235.96619, 11.118622, -299.17145, 22.237244, -269.67566, 30.576202, -248.60724, 22.237244, -257.0346, 55.59314, -261.2483, 61.152466)
 
+[node name="Button8" type="Polygon2D" parent="." unique_id=677573483]
+position = Vector2(364, 217)
+scale = Vector2(0.2373221, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="Button" type="Button" parent="Button8" unique_id=2027295134]
+z_index = -1
+offset_left = -467.71875
+offset_top = 22.237228
+offset_right = -6.1035156e-05
+offset_bottom = 80.61
+metadata/_edit_use_anchors_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Button8" unique_id=266111694]
+polygon = PackedVector2Array(-261.2483, 16.677917, -223.32507, 36.135498, -252.82092, 52.813416, -227.53882, 72.27106, -252.82092, 83.38965, -282.31665, 72.27106, -257.03455, 52.813416, -286.5304, 33.355835)
+
+[node name="Polygon2D" type="Polygon2D" parent="Button8/Polygon2D" unique_id=1883194441]
+color = Color(0.6039216, 0.6039216, 0.6039216, 1)
+polygon = PackedVector2Array(-257.03455, 25.016907, -269.67566, 33.355835, -257.03455, 44.474487, -240.17981, 36.135498)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Button8/Polygon2D" unique_id=810084295]
+color = Color(0.6039216, 0.6039216, 0.6039216, 1)
+polygon = PackedVector2Array(-257.03455, 61.152405, -269.67566, 72.27106, -252.82092, 77.83032, -240.17981, 69.491394, -257.03455, 58.37274)
+
 [connection signal="pressed" from="Button1/Button" to="." method="_on_button_pressed" binds= ["1"]]
 [connection signal="pressed" from="Button2/Button" to="." method="_on_button_pressed" binds= ["2"]]
 [connection signal="pressed" from="Button3/Button" to="." method="_on_button_pressed" binds= ["3"]]
@@ -248,3 +273,4 @@ polygon = PackedVector2Array(-278.10303, 72.27106, -231.75256, 72.27106, -227.53
 [connection signal="pressed" from="Back/Button" to="." method="_on_button_pressed" binds= ["Menu"]]
 [connection signal="pressed" from="Button6/Button" to="." method="_on_button_pressed" binds= ["6"]]
 [connection signal="pressed" from="Button7/Button" to="." method="_on_button_pressed" binds= ["7"]]
+[connection signal="pressed" from="Button8/Button" to="." method="_on_button_pressed" binds= ["8"]]
