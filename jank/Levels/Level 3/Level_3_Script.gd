@@ -39,8 +39,9 @@ func _input(event):
 		#Player.apply_force(myForce)
 		if isTouchingFloor():
 			Player.apply_impulse(myForce);
-		
-		
+	if event.is_action_pressed("reset"):
+		get_tree().reload_current_scene()
+
 		
 
 # Called when the node enters the scene tree for the first time.

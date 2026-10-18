@@ -16,6 +16,7 @@ var airJumped = false
 var skewing = false
 var timesBroken = 0
 var hasKey = false
+var keyed = false
 
 func _input(event):
 	if event.is_action_pressed("jump"):
@@ -43,17 +44,17 @@ func _input(event):
 		#Player.apply_force(myForce)
 		if isTouchingFloor():
 			Player.apply_impulse(myForce);
-		
+	if event.is_action_pressed("reset"):
+		get_tree().reload_current_scene()
+
 		
 		
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	setMessage("Screw that sphere, we dont need it. I can code working things, if you go get that key then you can beat the level!")
-	await get_tree().create_timer(1).timeout
-	setMessage("Okay so can we like not please")
-	await get_tree().create_timer(2).timeout
-	setMessage("Okay so new plan, figure out how the door puzzlr works i bet you cant")
+	setMessage("Thank you for playing my game, despite how janky it is! Just touch the orange to go back to the main menu")
+	await get_tree().create_timer(3).timeout
+	setMessage("Please dont touch the sphere.")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	PlayerSprite.global_position = Player.global_position
@@ -62,19 +63,21 @@ func _process(delta: float) -> void:
 		airJumped = false
 	if skewing:
 		brokenBall.skew = randi_range(-89,89)
+		brokenBall.position.x += randi_range(-1,1)
+		brokenBall.position.y += randi_range(-1,1)
 			
 #called when the player touches the end of level trigger
 func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	print("EOL trigger touched")
 	if (timesBroken < 2):
-		setMessage("Wow your so smart")
+		setMessage("Thank you!")
 	elif (timesBroken == 2):
-		setMessage("...")
+		setMessage("Thanks.")
 	else:
-		setMessage("I genuinly wish utmost unfortunes upon your family you coniving weasel.")
+		setMessage("Get out.")
 	await get_tree().create_timer(0.5).timeout
 	print("next level")
-
+	get_tree().change_scene_to_file("res://Levels/Level Menu/Level_Menu.tscn")
 func typeChat():
 	if !(finishedMessage == currentMessage):
 		textChat.text = currentMessage + finishedMessage[messageChar]
@@ -100,21 +103,21 @@ func _on_ball_body_entered(body: Node, obj: String) -> void:
 		print("Skewing = true")
 		await get_tree().create_timer(1.5).timeout
 		if (timesBroken == 1):
-			setMessage("Okay screw you just beat the level dude.")
-			await get_tree().create_timer(1.5).timeout
 			setMessage("Let me fix it...")
 			await get_tree().create_timer(3).timeout
 			skewing = false
 			brokenBall.skew = 0
 			setMessage("There. Its fixed. Dont touch it. Finish the level.")
 		elif (timesBroken == 2):
-			setMessage("Im gonna atomize you.")
+			setMessage("yo can we not")
 			await get_tree().create_timer(3).timeout
 			skewing = false
 			brokenBall.skew = 0
-			setMessage("There. Its fixed. Dont touch it. Finish the level. Please.")
+			setMessage("Dude just take the moment and leave")
 		else:
 			setMessage("............")
 			await get_tree().create_timer(3).timeout
 			skewing = false
 			brokenBall.skew = 0
+	elif (obj == "key"):
+		print("Key pickup")

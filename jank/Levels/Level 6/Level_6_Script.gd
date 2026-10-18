@@ -41,7 +41,9 @@ func _input(event):
 		#Player.apply_force(myForce)
 		if isTouchingFloor():
 			Player.apply_impulse(myForce);
-		
+	if event.is_action_pressed("reset"):
+		get_tree().reload_current_scene()
+
 		
 		
 
@@ -57,6 +59,8 @@ func _process(delta: float) -> void:
 		airJumped = false
 	if skewing:
 		brokenBall.skew = randi_range(-89,89)
+		brokenBall.position.x += randi_range(-1,1)
+		brokenBall.position.y += randi_range(-1,1)
 			
 #called when the player touches the end of level trigger
 func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:

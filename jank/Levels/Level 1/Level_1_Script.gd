@@ -33,13 +33,14 @@ func _input(event):
 		myForce.y = 0;
 		#Player.apply_force(myForce)
 		Player.apply_impulse(myForce);
-		
+	if event.is_action_pressed("reset"):
+		get_tree().reload_current_scene()
 		
 		
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	setMessage("Hey! Welcome to my physics sandbox! You can use the arrow keys to move, and the spacebar to jump!")
+	setMessage("Hey! Welcome to my physics sandbox! You can use the arrow keys to move, and the spacebar to jump! You can also reset with R!")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
