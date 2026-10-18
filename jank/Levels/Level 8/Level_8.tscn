@@ -1,0 +1,339 @@
+[gd_scene format=3 uid="uid://dv0cofcks43vx"]
+
+[ext_resource type="Script" uid="uid://cbe3d2pvyxgfr" path="res://Levels/Level 8/Level_8_Script.gd" id="1_xplrl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cxiam"]
+radius = 19.026299
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cxiam"]
+size = Vector2(1125, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2v4n4"]
+size = Vector2(31, 636)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jio8"]
+size = Vector2(1440, 311)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48r1q"]
+size = Vector2(122, 30)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mx4s3"]
+radius = 86.833176
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2v4n4"]
+radius = 12.0
+height = 46.0
+
+[node name="Node2D" type="Node2D" unique_id=965193724 node_paths=PackedStringArray("Player", "PlayerSprite", "EolTrigger", "textChat", "playerRay", "brokenBall", "key")]
+script = ExtResource("1_xplrl")
+Player = NodePath("Player")
+PlayerSprite = NodePath("Player2dSprite")
+EolTrigger = NodePath("Area2D")
+textChat = NodePath("RichTextLabel")
+playerRay = NodePath("Player2dSprite/RayCast2D")
+brokenBall = NodePath("Ball")
+key = NodePath("RigidBody2D")
+
+[node name="Player" type="RigidBody2D" parent="." unique_id=272158072]
+position = Vector2(1041, 541)
+constant_force = Vector2(0, -300)
+constant_torque = 2.13
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=666665252]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_cxiam")
+
+[node name="playerarea2D" type="Area2D" parent="Player" unique_id=1979979719]
+position = Vector2(0, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/playerarea2D" unique_id=200249450]
+shape = SubResource("CircleShape2D_cxiam")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1060266912]
+position = Vector2(880, 168)
+
+[node name="Polygon2D" type="Polygon2D" parent="Floor" unique_id=1738322572]
+position = Vector2(258.6361, 451.14447)
+scale = Vector2(2.3022308, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1904054581]
+position = Vector2(-303.5, 477)
+shape = SubResource("RectangleShape2D_cxiam")
+
+[node name="wallLeft" type="StaticBody2D" parent="." unique_id=1933933877]
+position = Vector2(880, 168)
+
+[node name="Polygon2D" type="Polygon2D" parent="wallLeft" unique_id=1698824866]
+position = Vector2(-835.1139, -172.69963)
+scale = Vector2(0.060113497, 7.0222216)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallLeft" unique_id=437923831]
+position = Vector2(-847.5, 169)
+shape = SubResource("RectangleShape2D_2v4n4")
+
+[node name="wallLeft2" type="StaticBody2D" parent="." unique_id=930569930]
+position = Vector2(1993, 156)
+
+[node name="Polygon2D" type="Polygon2D" parent="wallLeft2" unique_id=1263886810]
+position = Vector2(-835.1139, -172.69963)
+scale = Vector2(0.060113497, 7.0222216)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallLeft2" unique_id=1145334264]
+position = Vector2(-847.5, 169)
+shape = SubResource("RectangleShape2D_2v4n4")
+
+[node name="Floor2" type="StaticBody2D" parent="." unique_id=103161666]
+position = Vector2(882, -457)
+
+[node name="Polygon2D" type="Polygon2D" parent="Floor2" unique_id=83244311]
+position = Vector2(258.6361, 451.14447)
+scale = Vector2(2.3022308, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2" unique_id=265569157]
+position = Vector2(-323, 330.5)
+shape = SubResource("RectangleShape2D_8jio8")
+
+[node name="Chunk1" type="StaticBody2D" parent="." unique_id=1902447649]
+position = Vector2(1174, -147)
+
+[node name="Polygon2D" type="Polygon2D" parent="Chunk1" unique_id=881651029]
+position = Vector2(-36.049816, 295)
+scale = Vector2(0.26359025, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -493.00098, 91.72864, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chunk1" unique_id=1848147505]
+position = Vector2(-102, 312)
+shape = SubResource("RectangleShape2D_48r1q")
+
+[node name="Chunk2" type="StaticBody2D" parent="." unique_id=1770343159]
+position = Vector2(896, 18)
+
+[node name="Polygon2D" type="Polygon2D" parent="Chunk2" unique_id=348608480]
+position = Vector2(-135.45007, 149.14449)
+scale = Vector2(0.2373221, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chunk2" unique_id=776974233]
+position = Vector2(-189.45007, 166.14447)
+shape = SubResource("RectangleShape2D_48r1q")
+
+[node name="Chunk3" type="StaticBody2D" parent="." unique_id=981929648]
+position = Vector2(772, 110)
+
+[node name="Polygon2D" type="Polygon2D" parent="Chunk3" unique_id=578532576]
+position = Vector2(-36.000015, 295)
+scale = Vector2(0.2373221, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chunk3" unique_id=2031323877]
+position = Vector2(-90, 312)
+shape = SubResource("RectangleShape2D_48r1q")
+
+[node name="Chunk3" type="StaticBody2D" parent="Chunk3" unique_id=1947728207]
+position = Vector2(-474, 48)
+
+[node name="Polygon2D" type="Polygon2D" parent="Chunk3/Chunk3" unique_id=376951231]
+position = Vector2(-36.000015, 295)
+scale = Vector2(0.2373221, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chunk3/Chunk3" unique_id=166568917]
+position = Vector2(-90, 312)
+shape = SubResource("RectangleShape2D_48r1q")
+
+[node name="Chunk3" type="StaticBody2D" parent="Chunk3/Chunk3" unique_id=928311318]
+position = Vector2(26, 61)
+
+[node name="Polygon2D" type="Polygon2D" parent="Chunk3/Chunk3/Chunk3" unique_id=543514543]
+position = Vector2(-41.000015, 264)
+rotation = 1.5707964
+scale = Vector2(0.2373221, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Chunk3/Chunk3/Chunk3" unique_id=905296045]
+position = Vector2(-1, -2)
+polygon = PackedVector2Array(-74, 148, -42, 148, -43, 265, -71, 263)
+
+[node name="Chunk3" type="StaticBody2D" parent="Chunk3/Chunk3/Chunk3" unique_id=132938323]
+position = Vector2(-108, -4)
+
+[node name="Polygon2D" type="Polygon2D" parent="Chunk3/Chunk3/Chunk3/Chunk3" unique_id=865656702]
+position = Vector2(-41.000015, 264)
+rotation = 1.5707964
+scale = Vector2(0.2373221, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Chunk3/Chunk3/Chunk3/Chunk3" unique_id=1014140422]
+position = Vector2(-1, -2)
+polygon = PackedVector2Array(-74, 148, -42, 148, -43, 265, -71, 263)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=655159511]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1804080934]
+position = Vector2(-638, 1)
+scale = Vector2(1.5625031, 1)
+polygon = PackedVector2Array(1118, 42, 1135, 42, 1134, 142, 1117, 142)
+
+[node name="Polygon2D" type="Polygon2D" parent="Area2D" unique_id=450298845]
+color = Color(0.955715, 0.5051854, 7.70092e-07, 1)
+polygon = PackedVector2Array(1118, 42, 1135, 42, 1134, 142, 1117, 142)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=729345683]
+offset_left = 99.0
+offset_top = 32.0
+offset_right = 1036.0
+offset_bottom = 88.0
+localize_numeral_system = false
+text = "Hello World!"
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="Player2dSprite" type="Polygon2D" parent="." unique_id=405033321]
+position = Vector2(1039.6428, 542.5143)
+scale = Vector2(0.3127792, 0.3214287)
+polygon = PackedVector2Array(-56.40674, -57.599976, -56.406677, -3.1999512, -56.40674, 54.400024, 4.3389893, 60.622253, 65.08472, 54.400024, 65.08472, -57.599976)
+
+[node name="RayCast2D" type="RayCast2D" parent="Player2dSprite" unique_id=1898807612]
+position = Vector2(0, -9.599976)
+scale = Vector2(4.338982, 3.199999)
+target_position = Vector2(0, 24)
+
+[node name="Polygon2D" type="Polygon2D" parent="Player2dSprite" unique_id=1699569962]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-46.815308, -35.822205, -11.6467285, -23.377747, -11.6467285, -10.933289, -46.815308, -23.377747)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Player2dSprite" unique_id=1487832718]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(7.536133, -23.377747, 39.50757, -38.93329, 39.50757, -29.599976, 7.536133, -10.933289)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Player2dSprite" unique_id=236895419]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-21.23816, -7.8222046, -30.82959, -4.7110596, -30.82959, 4.6222534, -24.435303, 7.7333374, -18.041016, 4.6222534, -18.041016, -1.5999756)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Player2dSprite" unique_id=1511232131]
+color = Color(0, 0, 0, 1)
+offset = Vector2(50, 0)
+polygon = PackedVector2Array(-21.23816, -7.8222046, -30.82959, -4.7110596, -30.82959, 4.6222534, -24.435303, 7.7333374, -18.041016, 4.6222534, -18.041016, -1.5999756)
+
+[node name="Polygon2D5" type="Polygon2D" parent="Player2dSprite" unique_id=1663153655]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-40.42102, 20.177795, -2.0552979, 35.733337, 33.11328, 20.177795, 33.11328, 38.844482, 23.52185, 54.400024, -14.843872, 54.400024, -43.618164, 35.733337)
+
+[node name="Ball" type="RigidBody2D" parent="." unique_id=703668440]
+position = Vector2(-594, -26)
+mass = 5.0
+contact_monitor = true
+max_contacts_reported = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball" unique_id=1897359753]
+position = Vector2(706, 115)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_mx4s3")
+
+[node name="Polygon2D" type="Polygon2D" parent="Ball/CollisionShape2D" unique_id=827909128]
+polygon = PackedVector2Array(-86, -8, -74, -46, -46, -72, -6, -84, 28, -80, 58, -64, 84, -26, 84, 14, 74, 44, 58, 66, 30, 82, -6, 86, -44, 74, -68, 52, -84, 28, -88, -2)
+
+[node name="Chunk4" type="StaticBody2D" parent="." unique_id=1119280674]
+position = Vector2(1089, -117)
+
+[node name="Polygon2D" type="Polygon2D" parent="Chunk4" unique_id=1309422571]
+position = Vector2(-36.049816, 295)
+scale = Vector2(0.26359025, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -493.00098, 91.72864, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chunk4" unique_id=1418672481]
+position = Vector2(-102, 312)
+shape = SubResource("RectangleShape2D_48r1q")
+
+[node name="Chunk4" type="StaticBody2D" parent="Chunk4" unique_id=139079014]
+position = Vector2(-876, -36)
+
+[node name="Polygon2D" type="Polygon2D" parent="Chunk4/Chunk4" unique_id=359550802]
+position = Vector2(-36.049816, 295)
+scale = Vector2(0.26359025, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -493.00098, 91.72864, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chunk4/Chunk4" unique_id=1995331794]
+position = Vector2(-102, 312)
+shape = SubResource("RectangleShape2D_48r1q")
+
+[node name="Chunk5" type="StaticBody2D" parent="." unique_id=847654693]
+position = Vector2(886, -88)
+
+[node name="Polygon2D" type="Polygon2D" parent="Chunk5" unique_id=1392630296]
+position = Vector2(-15.00001, 349.99997)
+rotation = 0.7853982
+scale = Vector2(0.26359025, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -5.3652344, -141.51685, -201.19507, -1.9654541, -488.1045, 2.3781128, -493.00098, 91.72864, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Chunk5" unique_id=1341086740]
+position = Vector2(-15.00001, 349.99997)
+rotation = 0.7853982
+scale = Vector2(0.26359025, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(163.63867, -41.275635, 136.8125, -112.0343, 53.651855, -243.72375, 2.6826172, -202.44788, -201.19507, -1.9654541, -488.1045, 2.3781128, -493.00098, 91.72864, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Chunk5" unique_id=972567122]
+polygon = PackedVector2Array(-130, 282, -106, 260, -52, 312, 57, 298, 39, 347, 27, 370, -37, 371)
+
+[node name="Chunk6" type="StaticBody2D" parent="." unique_id=225822306]
+position = Vector2(966, 265)
+
+[node name="Polygon2D" type="Polygon2D" parent="Chunk6" unique_id=1465290520]
+position = Vector2(-15.00001, 349.99997)
+rotation = 0.7853982
+scale = Vector2(0.26359025, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -493.00098, 91.72864, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Chunk6" unique_id=1210738474]
+polygon = PackedVector2Array(-130, 282, -106, 260, -17, 353, -37, 371)
+
+[node name="Chunk5" type="StaticBody2D" parent="Chunk6" unique_id=2087909843]
+position = Vector2(-89, -83)
+
+[node name="Polygon2D" type="Polygon2D" parent="Chunk6/Chunk5" unique_id=989233570]
+position = Vector2(-15.00001, 349.99997)
+rotation = 0.7853982
+scale = Vector2(0.26359025, 0.3597568)
+color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+polygon = PackedVector2Array(1.8955078, 6.378113, -488.1045, 2.3781128, -493.00098, 91.72864, -491.1045, 92.37811, -2.1044922, 85.37811)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Chunk6/Chunk5" unique_id=38713305]
+polygon = PackedVector2Array(-145, 268, -121, 247, -17, 353, -37, 371)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=870417416]
+
+[node name="Polygon2D" type="Polygon2D" parent="RigidBody2D" unique_id=782449915]
+position = Vector2(2, 1)
+color = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(199, 406, 209, 398, 222, 407, 214, 414, 214, 440, 200, 440, 208, 435, 209, 430, 200, 427, 208, 427, 208, 422, 200, 417, 208, 417, 208, 414)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1372426369]
+position = Vector2(212, 422)
+shape = SubResource("CapsuleShape2D_2v4n4")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1830426594]
+color = Color(0.3440756, 0.3440758, 0.34407574, 1)
+polygon = PackedVector2Array(967, 186, 967, 18, 931, 18, 934, 185)
+
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
+[connection signal="body_entered" from="Ball" to="." method="_on_ball_body_entered" binds= ["ball"]]
+[connection signal="body_entered" from="RigidBody2D" to="." method="_on_rigid_body_2d_body_entered" binds= ["key"]]
